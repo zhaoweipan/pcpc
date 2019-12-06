@@ -14,5 +14,4 @@ urlpatterns=[
     path('add/',views.AddView,name='add'),    
     path('<Unique_Squirrel_Id>/',views.UpdateView,name='update'),
     path('',views.DeleteView,name='delete'),
-    
     ]
