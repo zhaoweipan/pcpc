@@ -1,0 +1,66 @@
+{% if sightings_list %}
+    <a href="{% url 'sightings:add' %}">AddSightings</a>
+    <table border="1" >
+        <thead>
+            <tr>
+                <th colspan=2 >Latitude </th>
+                <th colspan=2 >Longitude </th>
+                <th colspan=2 >Unique_Squirrel_Id </th>
+                <th colspan=2 >Shift </th>
+                <th colspan=2 >Date </th>
+                <th colspan=2 >Age </th>
+                <th colspan=2 >Primary_Fur_Color </th>
+                <th colspan=2 >Location </th>
+                <th colspan=2 >Specific_Location </th>
+                <th colspan=2 >Running </th>
+                <th colspan=2 >Chasing </th>
+                <th colspan=2 >Climbing </th>
+                <th colspan=2 >Eating </th>
+                <th colspan=2 >Foraging </th>
+                <th colspan=2 >Other_Activities </th>
+                <th colspan=2 >Kuks </th>
+                <th colspan=2 >Quaas </th>
+                <th colspan=2 >Moans </th>
+                <th colspan=2 >Tail_flags </th>
+                <th colspan=2 >Tail_twitches </th>
+                <th colspan=2 >Approaches </th>
+                <th colspan=2 >Indifferent </th>
+                <th colspan=2 >Runs_from</th>
+            </tr>
+        </thead>
+        <tbody >
+        
+        {% for sightings in sightings_list %}
+            <tr>
+                <td colspan=2 >{{ sightings.Latitude }}</td>
+                <td colspan=2 >{{ sightings.Longitude }}</td>
+                <td colspan=2 >{{ sightings.Unique_Squirrel_Id }}</td>
+                <td colspan=2 >{{ sightings.Shift }}</td>
+                <td colspan=2 >{{ sightings.Date }}</td>
+                <td colspan=2 >{{ sightings.Age }}</td>
+                <td colspan=2 >{{ sightings.Primary_Fur_Color }}</td>
+                <td colspan=2 >{{ sightings.Location }}</td>
+                <td colspan=2 >{{ sightings.Specific_Location }}</td>
+                <td colspan=2 >{{ sightings.Running }}</td>
+                <td colspan=2 >{{ sightings.Chasing }}</td>
+                <td colspan=2 >{{ sightings.Climbing }}</td>
+                <td colspan=2 >{{ sightings.Eating }}</td>
+                <td colspan=2 >{{ sightings.Foraging }}</td>
+                <td colspan=2 >{{ sightings.Other_Activities }}</td>
+                <td colspan=2 >{{ sightings.Kuks }}</td>
+                <td colspan=2 >{{ sightings.Quaas }}</td>
+                <td colspan=2 >{{ sightings.Moans }}</td>
+                <td colspan=2 >{{ sightings.Tail_flags }}</td>
+                <td colspan=2 >{{ sightings.Tail_twitches }}</td>
+                <td colspan=2 >{{ sightings.Approaches }}</td>
+                <td colspan=2 >{{ sightings.Indifferent }}</td>
+                <td colspan=2 >{{ sightings.Runs_from}}</td>
+                <td colspan=2><a href="{% url 'sightings:update' sightings.Unique_Squirrel_Id %}">UpdateSightings</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    
+{% else %}
+    <p>No sightings in there.</p>
+{% endif %}

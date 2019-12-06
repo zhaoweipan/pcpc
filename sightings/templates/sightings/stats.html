@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8"><link rel="icon" href="https://jscdn.com.cn/highcharts/images/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            
+        </style>
+        <script src="https://code.highcharts.com.cn/highcharts/highcharts.js"></script>
+        <script src="https://code.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com.cn/highcharts/modules/data.js"></script>
+        <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+    </head>
+    <body>
+        <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+        <p>DataTable</p>
+        <table id="datatable">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>True</th>
+                    <th>False</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if context %}
+                {% for key ,value in context.items %}
+                <tr>
+                    <th>{{key}}</th>
+                    <td>{{value.True}}</td>
+                    <td>{{value.False}}</td>
+                </tr>
+                {% endfor %}
+                {% endif %}
+            </tbody>
+        </table>
+        <script>
+            var chart = Highcharts.chart('container', {
+                                                        data: {
+                                                            table: 'datatable'
+                                                        },
+                                                        chart: {
+                                                            type: 'column'
+                                                        },
+                                                        title: {
+                                                            text: 'squirrels actions'
+                                                        },
+                                                        yAxis: {
+                                                            allowDecimals: false,
+                                                            title: {
+                                                                text: '',
+                                                                rotation: 0
+                                                            }
+                                                        },
+                                                        tooltip: {
+                                                            formatter: function () {
+                                                                return '<b>' + this.series.name + '</b><br/>' +
+                                                                    this.point.y + '  ' + this.point.name.toLowerCase();
+                                                            }
+                                                        }
+                                                    });
+        </script>
+    </body>
+</html>
