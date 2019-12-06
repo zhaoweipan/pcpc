@@ -19,5 +19,5 @@ from sightings import views
 
 urlpatterns = [
     path('sightings/',include('sightings.urls')),
-    path('map/', views.map, name='map'),
+    path('map/', views.map),
     path('admin/', admin.site.urls),]
