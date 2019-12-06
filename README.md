@@ -10,7 +10,7 @@ Project Group 19, Section 2
 
 Uni
 ------- 
-UNIs:[zp2214 zc2499]
+UNIs: [zp2214 zc2499]
 
 The link to the server running our application:
 ------- 
