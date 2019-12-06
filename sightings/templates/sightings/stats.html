@@ -34,31 +34,5 @@
                 {% endif %}
             </tbody>
         </table>
-        <script>
-            var chart = Highcharts.chart('container', {
-                                                        data: {
-                                                            table: 'datatable'
-                                                        },
-                                                        chart: {
-                                                            type: 'column'
-                                                        },
-                                                        title: {
-                                                            text: 'squirrels actions'
-                                                        },
-                                                        yAxis: {
-                                                            allowDecimals: false,
-                                                            title: {
-                                                                text: '',
-                                                                rotation: 0
-                                                            }
-                                                        },
-                                                        tooltip: {
-                                                            formatter: function () {
-                                                                return '<b>' + this.series.name + '</b><br/>' +
-                                                                    this.point.y + '  ' + this.point.name.toLowerCase();
-                                                            }
-                                                        }
-                                                    });
-        </script>
     </body>
 </html>
