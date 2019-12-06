@@ -14,7 +14,7 @@ def map(request):
     
 def IndexView(request):
     # print(len(Sightings.objects.all()))
-    sightings_list=Sightings.objects.all()[::-1][:100]
+    sightings_list=Sightings.objects.all()[::-1][:10]
     template=loader.get_template('sightings/index.html')
     context={
         'sightings_list':sightings_list,
