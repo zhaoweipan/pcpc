@@ -1,5 +1,6 @@
 from django.core.management.base import BaseCommand, CommandError
 from sightings.models import Sightings
+import csv
 
 class Command(BaseCommand):
     help = 'export data to csv file'
