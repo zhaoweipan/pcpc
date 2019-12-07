@@ -43,4 +43,3 @@ class Command(BaseCommand):
 if __name__ == "__main__":
     main()
 print('Done!')
-
