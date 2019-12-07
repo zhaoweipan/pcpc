@@ -30,7 +30,7 @@ def UpdateView(request,Unique_Squirrel_Id):
             context= {'form': form,
                       'error': 'The form was not valid. Please do it again.'}
             return render(request,'sightings/edit.html' , context)
-	  else:
+    else:
         form = SightingsForm(instance=squirrel)
         context = {'form': form,
                   'instance': squirrel}
