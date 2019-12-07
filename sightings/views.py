@@ -59,7 +59,7 @@ def DeleteView(request,Unique_Squirrel_Id):
 def StatsView(request):
     Running_Count_True=Sightings.objects.filter(Running=True).count()
     Running_Count_False=Sightings.objects.filter(Running=False).count()
-	  Chasing_Count_True=Sightings.objects.filter(Chasing=True).count()
+    Chasing_Count_True=Sightings.objects.filter(Chasing=True).count()
     Chasing_Count_False=Sightings.objects.filter(Chasing=False).count()
     Climbing_Count_True=Sightings.objects.filter(Climbing=True).count()
     Climbing_Count_False=Sightings.objects.filter(Climbing=False).count()
